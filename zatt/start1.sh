@@ -1,0 +1,1 @@
+zattd -c zatt.conf -s zatt.0.persist

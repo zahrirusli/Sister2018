@@ -1,9 +1,13 @@
 FROM python:3.5-alpine
 
-ADD . /app/
+EXPOSE 5254
+EXPOSE 5255
+EXPOSE 5256
+
+COPY . /app/
+COPY ./zattstart.sh /app/zattstart.sh
 WORKDIR /app
 
 RUN python setup.py install
 
-EXPOSE 5254
-CMD ["zattd", "-c", "/app/zatt.conf", "-s", "storage.persist"]
+CMD ["./zattstart.sh"]

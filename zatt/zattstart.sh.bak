@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# Start the processes as daemon
+zattd -c zatt.conf -s zatt.0.persist -p 5254 >/dev/null 2>&1 < /dev/null &
+zattd -c zatt.conf -s zatt.1.persist -p 5255 >/dev/null 2>&1 < /dev/null &
+zattd -c zatt.conf -s zatt.2.persist -p 5256 >/dev/null 2>&1 < /dev/null &
