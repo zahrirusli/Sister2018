@@ -6,7 +6,6 @@ Vagrant.configure("2") do |config|
       node.vm.box_check_update = false
       node.vm.network "private_network", ip: "192.168.33.1#{i}"
 
-      # Opsional. Edit sesuai dengan nama network adapter di komputer
       node.vm.network "public_network", bridge: "wlo1"
 
       node.vm.provider "virtualbox" do |vb|
@@ -17,6 +16,21 @@ Vagrant.configure("2") do |config|
 
       node.vm.provision "shell", path: "provision.sh", privileged: false
     end
-    # config.ssh.insert_key = false
+  end
+
+  config.vm.define "webserver" do |web_server|
+    web_server.vm.hostname = "webserver"
+    web_server.vm.box = "ubuntu/xenial64"
+    web_server.vm.network "private_network", ip: "192.168.33.10"
+    web_server.vm.network "public_network", bridge: "wlo1"
+    
+    web_server.vm.provider "virtualbox" do |vb|
+      vb.name = "webserver"
+      vb.gui = false
+      vb.memory = "512"
+    end
+
+    web_server.vm.provision "shell", path: "provision.sh", privileged: false
+    web_server.vm.provision "shell", path: "provision_webserver.sh", privileged: false
   end
 end

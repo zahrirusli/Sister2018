@@ -67,4 +67,4 @@ target/
 
 # pyenv
 .python-version
-
+.vagrant
