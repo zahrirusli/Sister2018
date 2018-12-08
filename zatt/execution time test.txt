@@ -1,0 +1,104 @@
+3 node
+=====================================
+Execution time:
+--- 0.022640466690063477 seconds ---
+{'test1': 112}
+test1
+
+Execution time:
+--- 0.007891178131103516 seconds ---
+{'test2': 112}
+test2
+
+Execution time:
+--- 0.014461755752563477 seconds ---
+{'test3': 112}
+test3
+
+Execution time:
+--- 0.021700382232666016 seconds ---
+{'test4': 112}
+test4
+
+Execution time:
+--- 0.0029604434967041016 seconds ---
+{'test5': 112}
+test5
+
+Execution time:
+--- 0.00802159309387207 seconds ---
+{'test6': 112}
+test6
+
+Execution time:
+--- 0.02716827392578125 seconds ---
+{'test7': 112}
+test7
+
+Execution time:
+--- 0.010559320449829102 seconds ---
+{'test8': 112}
+test8
+
+Execution time:
+--- 0.017998456954956055 seconds ---
+{'test9': 112}
+test9
+
+Execution time:
+--- 0.03055882453918457 seconds ---
+{'test10': 112}
+test10
+
+5 node
+====================================
+
+{'test11': 112}
+test11
+Execution time:
+--- 0.012359857559204102 seconds ---
+
+{'test12': 112}
+test12
+Execution time:
+--- 0.03130960464477539 seconds ---
+
+{'test13': 112}
+test13
+Execution time:
+--- 0.01884913444519043 seconds ---
+
+{'test14': 112}
+test14
+Execution time:
+--- 0.007105588912963867 seconds ---
+
+{'test15': 112}
+test15
+Execution time:
+--- 0.022269487380981445 seconds ---
+
+{'test16': 112}
+test16
+Execution time:
+--- 0.026763200759887695 seconds ---
+
+{'test17': 112}
+test17
+Execution time:
+--- 0.010078907012939453 seconds ---
+
+{'test18': 112}
+test18
+Execution time:
+--- 0.00554347038269043 seconds ---
+
+{'test19': 112}
+test19
+Execution time:
+--- 0.008202314376831055 seconds ---
+
+{'test20': 112}
+test20
+Execution time:
+--- 0.02509140968322754 seconds ---

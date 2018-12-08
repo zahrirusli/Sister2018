@@ -1,10 +1,11 @@
 from flask import Flask, request
 from zatt.client import DistributedDict
 from json import dumps
+import time
 
 app = Flask(__name__)
 
-d = DistributedDict('127.0.0.1', 5254)
+d = DistributedDict('127.0.0.1', 5256)
 
 @app.route('/', methods=['GET'])
 def index():
@@ -25,13 +26,15 @@ def call(ko):
 
 @app.route('/', methods=['POST'])
 def create():
+	start_time = time.time()
 	data = request.get_json(force=True)
 	print(data)
 	key = list(data.keys())[0]
 	print(key)
 	val = data[key]
 	d[key] = val
-	#key = val
+	print("Execution time:")
+	print("--- %s seconds ---" % (time.time() - start_time))
 	return dumps(d[key])
 
 @app.route('/<id>', methods=['DELETE'])
